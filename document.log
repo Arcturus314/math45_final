@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.19)  20 APR 2018 03:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.19)  20 APR 2018 20:39
 entering extended mode
 **./document.tex
 (document.tex
@@ -206,85 +206,89 @@ Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
-) [1
+)
+Overfull \hbox (116.63965pt too wide) in paragraph at lines 23--33
+ [] 
+ []
+
+[1
 
 {C:/Users/kaveh/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 <forces.png, id=10, 84.315pt x 367.3725pt>
 File: forces.png Graphic file (type png)
 <use forces.png>
-Package pdftex.def Info: forces.png  used on input line 40.
+Package pdftex.def Info: forces.png  used on input line 43.
 (pdftex.def)             Requested size: 42.15738pt x 183.68579pt.
-
-[2 <./forces.png>]
-<collision.png, id=16, 470.75874pt x 329.23pt>
+ [2 <./forces.png>]
+<collision.png, id=18, 470.75874pt x 329.23pt>
 File: collision.png Graphic file (type png)
 <use collision.png>
-Package pdftex.def Info: collision.png  used on input line 56.
+Package pdftex.def Info: collision.png  used on input line 62.
 (pdftex.def)             Requested size: 235.3788pt x 164.6146pt.
  [3 <./collision.png>]
 <momentum.png, id=24, 633.36626pt x 241.90375pt>
 File: momentum.png Graphic file (type png)
 <use momentum.png>
-Package pdftex.def Info: momentum.png  used on input line 101.
+Package pdftex.def Info: momentum.png  used on input line 110.
 (pdftex.def)             Requested size: 380.02269pt x 145.14336pt.
 
-Overfull \hbox (35.02269pt too wide) in paragraph at lines 101--102
+Overfull \hbox (35.02269pt too wide) in paragraph at lines 110--111
  [] 
  []
 
-[4 <./momentum.png>] [5]
-Overfull \hbox (138.02678pt too wide) in paragraph at lines 194--205
+[4 <./momentum.png>] [5] [6]
+Overfull \hbox (138.02678pt too wide) in paragraph at lines 203--214
  [] 
  []
 
-[6]
-<velocity.png, id=35, 313.17pt x 186.6975pt>
+<velocity.png, id=37, 313.17pt x 186.6975pt>
 File: velocity.png Graphic file (type png)
 <use velocity.png>
-Package pdftex.def Info: velocity.png  used on input line 210.
-(pdftex.def)             Requested size: 187.90344pt x 112.01935pt.
-<altitude.png, id=36, 313.17pt x 186.6975pt>
+Package pdftex.def Info: velocity.png  used on input line 225.
+(pdftex.def)             Requested size: 170.77332pt x 101.80936pt.
+<altitude.png, id=38, 313.17pt x 186.6975pt>
 File: altitude.png Graphic file (type png)
 <use altitude.png>
-Package pdftex.def Info: altitude.png  used on input line 211.
-(pdftex.def)             Requested size: 187.90344pt x 112.01935pt.
-<optimization.png, id=37, 702.2235pt x 289.68225pt>
+Package pdftex.def Info: altitude.png  used on input line 226.
+(pdftex.def)             Requested size: 170.77332pt x 101.80936pt.
+<optimization.png, id=39, 702.2235pt x 289.68225pt>
 File: optimization.png Graphic file (type png)
 <use optimization.png>
-Package pdftex.def Info: optimization.png  used on input line 220.
+Package pdftex.def Info: optimization.png  used on input line 240.
 (pdftex.def)             Requested size: 351.11089pt x 144.84076pt.
 
-Overfull \hbox (6.11089pt too wide) in paragraph at lines 220--221
+Overfull \hbox (6.11089pt too wide) in paragraph at lines 240--241
  [] 
  []
 
-[7 <./velocity.png> <./altitude.png>] [8 <./optimization.png>] (document.aux) )
- 
+[7 <./velocity.png> <./altitude.png>] [8 <./optimization.png>] [9]
+(document.aux) ) 
 Here is how much of TeX's memory you used:
- 2076 strings out of 493305
- 29076 string characters out of 3129802
- 91666 words of memory out of 3000000
- 5615 multiletter control sequences out of 15000+200000
+ 2083 strings out of 493305
+ 29151 string characters out of 3129802
+ 91706 words of memory out of 3000000
+ 5622 multiletter control sequences out of 15000+200000
  8707 words of font info for 32 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,13n,25p,648b,195s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/kaveh/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmbx12.pfb><C:/Users/kaveh/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publ
-ic/amsfonts/cm/cmmi10.pfb><C:/Users/kaveh/AppData/Local/Programs/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/kaveh/AppData/Local/Programs/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/kaveh/AppData/Local
-/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/kaveh/A
-ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/U
-sers/kaveh/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
-6.pfb><C:/Users/kaveh/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmr7.pfb><C:/Users/kaveh/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmr8.pfb><C:/Users/kaveh/AppData/Local/Programs/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/kaveh/AppData/Local/Programs/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/kaveh/AppData/Loc
-al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on document.pdf (8 pages, 222527 bytes).
+ 41i,13n,25p,816b,260s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/kaveh/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmbx12.pfb><C:/Users/kaveh/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/kaveh/AppData/Local/Program
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/kaveh/AppData/L
+ocal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/kav
+eh/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><
+C:/Users/kaveh/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmr17.pfb><C:/Users/kaveh/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmr6.pfb><C:/Users/kaveh/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmr7.pfb><C:/Users/kaveh/AppData/Local/Programs/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/kaveh/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/kaveh/AppData/
+Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/k
+aveh/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb
+>
+Output written on document.pdf (9 pages, 229554 bytes).
 PDF statistics:
- 87 PDF objects out of 1000 (max. 8388607)
+ 90 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
