@@ -2,6 +2,7 @@
 \usepackage{amsmath}
 \usepackage{graphicx}
 
+%\renewcommand{\familydefault}{\sfdefault}
 
 %opening
 \title{Math 45 Final Project: Calculating the Maximum Altitude Attainable by a Rocket in the Earth's Atmosphere}
@@ -13,11 +14,17 @@
 
 \section{Introduction and Constraints}
 
-In this project, we aimed to optimize the dimensions of a rocket to obtain is maximum altitude. We immediately noted that a rocket's altitude is dependent on multiple factors: the mass of the rocket, its fuel capacity, how fast, in terms of velocity and mass per unit time, it can eject the fuel, as well as the drag on the rocket. There would be an upward force due to thrust, and downward force due to its mass.
+\hspace{0.2in}\textbf{Slide 2} 
+
+\hspace{-0.2in}In this project, we aimed to optimize the dimensions of a rocket to obtain is maximum altitude. We immediately noted that a rocket's altitude is dependent on multiple factors: the mass of the rocket, its fuel capacity, how fast, in terms of velocity and mass per unit time, it can eject the fuel, as well as the drag on the rocket. There would be an upward force due to thrust, and downward force due to its mass.
+
+\textbf{Slide 3}
 
 However, rocket design is immensely complex, and simplifying assumptions would be necessary. While detailed assumptions in terms of the engine design, atmospheric composition, and other factors are described in the relevant sections of this paper, the largest simplification made is for the rocket to be a cone with a given height, where we vary its vertex angle. This brings immediate consequences: we predict that drag will be lower with a smaller angle, but a smaller angle will reduce the volume of the rocket and therefore its fuel storage capacity.
 
 The rocket is constrained to be a cone, with a  height $h$ and vertex angle $\theta$. The former variable is fixed: our justification for this is that height is a large constraining factor for rocket production today. Assembly facilities are limited by the height of their roof. The rocket is also not entirely composed of fuel: there are control systems and engine components that need to be included in the model. Therefore we created the following set of parameters, based on the model of a rocket rising through the Earth's atmosphere against gravity, which is assumed to be constant, and drag.
+
+\textbf{Slide 4}
 
 \begin{center}
 	\begin{tabular} {c l l}
@@ -33,6 +40,7 @@ The rocket is constrained to be a cone, with a  height $h$ and vertex angle $\th
 \end{center}
 
 
+\textbf{Slide 5}
 
 We see the following force diagram for the rocket in figure \ref{forces}.
 
@@ -47,8 +55,16 @@ We see the following force diagram for the rocket in figure \ref{forces}.
 
 We therefore need to calculate the magnitude of the drag force on the rocket. The weight force is known: $F_{weight} = Mg$.
 
+\textbf{Slide 6}
 
+As drag force is a complex phenomenon, we built our physical demonstration around our model of it. In the tray we have marbles, representing air particles, as well as a wooden triangle representing the ship. While this is a 2D approximation of our 3D model, it demonstrates the same characteristics that we use to model drag.
+
+As we move the ship through the marble field, the marbles bounce off of the side of the ship: some momentum of the ship is imparted onto the marbles, which averages into a constant drag force.
+
+\newpage
 \section{Calculating Drag Force}
+
+\textbf{Slide 7}
 
 We abstract the atmosphere as a collection of equally spaced point masses at rest with density $\sigma$, and without any inter-particle forces. Additionally, we assume that there are enough of these particles that the rocket's collisions will generally be continuous. While particles within the atmosphere are not at rest, there's generally little to no net movement such that the vector sum of the motion of all particles within a constrained area of the atmosphere is approximately zero. We assume that all collisions are elastic, and that atmospheric pressure is constant, an assumption that vastly simplified our calculations.
 
@@ -86,8 +102,8 @@ And substitute this expression into the expression for momentum change:
 
 \begin{center}
 	\begin{align*}
-	\Delta P &= mv\times(1-\cos(\theta)) \\
-	\Delta P &= \pi h^2 \tan^2(\theta) v \Delta t \sigma \times v\times(1-\cos(\theta)) \\
+	\Delta P &= mv\times(1-\cos(2\theta)) \\
+	\Delta P &= \pi h^2 \tan^2(\theta) v \Delta t \sigma \times v\times(1-\cos(2\theta)) \\
 	\Delta P &= v^2 \Delta t \sigma \pi h^2 \tan^2(\theta) (1-cos(2\theta)) \\
 	\Delta P &= \alpha v^2 \Delta t \text{  where $\alpha$ is the drag coefficient} \\
 	\frac{\Delta P}{\Delta t} &= \alpha v^2 \\
@@ -97,7 +113,9 @@ And substitute this expression into the expression for momentum change:
 
 We have now found the drag force via a first-order differential equation.
 
+
 \section{Calculating the Rocket's Motion}
+\textbf{Slide 8}
 
 We can now find the rocket's motion via considering conservation of momentum. The below diagram illustrates fuel ejection from the rocket at times $t$ and $t+\Delta t$. The mass of the rocket is $M$, and the mass of the fuel ejected over the interval is $\Delta m$. The velocity of the rocket is $V$, its gain in velocity is $\Delta V$, and the speed differential between it and the fuel is $V+\Delta V$.
 
@@ -121,6 +139,8 @@ We can now write expressions for the momentum of the system at the two times
 \end{center}
 
 We can write this in terms of the applied force
+
+\textbf{Slide 9}
 
 \begin{center}
 	\begin{align*}
@@ -153,6 +173,8 @@ Therefore:
 	\end{align*}
 \end{center}
 
+\textbf{Slide 10}
+
 We now have a differential equation describing the velocity of the rocket as a function of time. We also have a differential equation describing its altitude:
 
 \begin{center}
@@ -164,6 +186,8 @@ We now have a differential equation describing the velocity of the rocket as a f
 As the former equation has no closed-form solution, a numerical approximation can be done via Euler's method. The same set of timesteps can be used in a second application of Euler's method to calculate altitude as a function of time.
 
 \section{Solution Existence}
+
+\textbf{Slide 11}
 
 With reference to the physical implications of our solution, it is clear that the solution only exists during $0 \le t < t_{f}$, where $t_f$ occurs when there is no fuel left in the rocket. We can calculate $t_f$, with $volume_{other}$ referencing the volume of the rocket consumed by the payload, control systems, and other non-fuel entities:
 
@@ -181,6 +205,8 @@ There is another condition for physical existence present in the solution. Drag 
 
 \section{Euler's Method Approximation}
 
+\textbf{Slide 12}
+
 A python script was written to approximate velocity and altitude via Euler's method, which then exported data to a .csv file which can be analyzed via Excel. This script is available in a GitHub repository\footnote{https://github.com/Arcturus314/math45\_final}.
 
 
@@ -196,6 +222,8 @@ A python script was written to approximate velocity and altitude via Euler's met
 With the luxury of computer automation on our side, and the relative simplicity of calculating $\frac{dV}{dt}$, we found that no timestep lower than $\Delta t = 0.0001$ offered a distinguishable output.
 
 \section{Establishing Parameter Values}
+
+\textbf{Slide 13}
 
 We then needed to find reasonable parameters for our rocket model. Data for all necessary constants are not publically available for the single-stage rocket approximated by our model. We therefore assembled a reasonable set of parameter values from various rockets. 
 
@@ -213,6 +241,9 @@ We then needed to find reasonable parameters for our rocket model. Data for all 
 	\end{tabular}
 \end{center}
 	
+	
+\textbf{Slide 14}
+
 Substituting these values into the Euler's method approximator produced plots for $\theta = \frac{\pi}{20}$ as seen in figure \ref{velalt}.
 
 Velocity appears to roughly maintain a constant derivative, although with minor positive curvature, due to the interaction between thrust, mass loss, and increasing drag force. As its derivative decreases near 50 seconds the velocity begins to approach a positive steady state, the point at which drag force and mg is roughly equal in magnitude to thrust. The plot ends at the point when the rocket has run out of fuel.
@@ -231,6 +262,8 @@ The altitude graph appears as expected given its derivative: altitude increases 
 
 \section{Optimizing Nose Cone Angle}
 
+\textbf{Slide 15}
+
 We then used the previously-written Python script to generate maximum altitudes for vertex angles $0<\theta<\frac{\pi}{2}$. This plot can be seen in figure \ref{optimization}.
 
 \begin{figure}[h]
@@ -241,11 +274,15 @@ We then used the previously-written Python script to generate maximum altitudes 
 	\end{center}
 \end{figure}
 
-The maximum altitude occurs at a nosecone angle of $\theta = 0.261799$, with an altitude of 115km. The smallest nosecone angle at which the rocket gains altitude occurs when the cone has a large enough volume to fit the `other' components, and the angle for which the rocket fails to ascend near 0.3 radians occurs when the mass of the laden rocket produces a weight larger than its thrust.
+The maximum altitude occurs at a nosecone angle of $\theta = 0.261799 rad$, with an altitude of 115km. The smallest nosecone angle at which the rocket gains altitude occurs when the cone has a large enough volume to fit the `other' components, and the angle for which the rocket fails to ascend near 0.3 radians occurs when the mass of the laden rocket produces a weight larger than its thrust.
+
 
 \section{Analysis}
+\textbf{Slide 16}
 
 Our obtained result is reasonable. While our rocket included only one stage, it passed the Karman line at 100km \footnote{http://www.iop.org/resources/topic/archive/space/}, which is commonly considered the boundary between air and space, as it is the point at which the air density is too low for flight \footnote{http://www.messagetoeagle.com/what-is-the-karman-line/}. As the rockets from which model parameters were derived all passed the Karman line, we see that our model produced reasonable values.
+
+\textbf{Slide 17}
 
 However, there are many simplifications inherent in our model, and therefore, many characteristics that could be improved. In particular, the accuracy of our model would be increased if the expression for drag included a variable height-dependent air density term. Drag was the limiting factor in acceleration of the rocket once it had reached reasonable speed, and as such more accurate results would be obtained if air density was more precisely modeled. Similarly, gravity is variable as a function of height: implementing this into our model would further increase accuracy.
 
